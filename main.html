@@ -2,11 +2,16 @@
 <html>
     <head>
         <title>Financias</title>
-        <script src="app.js"></script>
+        <script src="js/app.js"></script>
+
+    
+    <!-- Materialize Css & Js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </head>
     <body style="background-color: #131516; color: white; color-scheme: dark !important;">
         <div>
-            <div>
+            <div class="container">
                 <div>
                     <p>Total</p>
                     <p id="total">0</p>
@@ -17,19 +22,21 @@
                 </select>
                 <input type="number" id="agregar">
             </div>
-            <div>
+            <div class="container">
                 <p>
                     <div>Ingresos</div>
                     <div id="ingresos">+0</div>
                 </p>
             </div>
-            <div>
+            <div class="container">
                 <p>
                     <div>Gastos</div>
                     <div id="gastos">-0</div>
                 </p>
             </div>
-            <button id="boton" onclick="actualizarTotal();">Sumar</button>
+            <div class="container">
+                <button id="boton" onclick="actualizarTotal();">Sumar</button>
+            </div>
         </div>
     </body>
 </html>
