@@ -2,15 +2,21 @@
 <html>
     <head>
         <title>Financias</title>
+        <script src="app.js"></script>
     </head>
-    <body style="background-color: #131516; color: white;">
+    <body style="background-color: #131516; color: white; color-scheme: dark !important;">
         <div>
-            <p id="total">0</p>
-            <select id="signo">
-                <option value="ingreso">Ingreso</option>
-                <option value="gasto">Gasto</option>
-            </select>
-            <input type="number" id="agregar">
+            <div>
+                <div>
+                    <p>Total</p>
+                    <p id="total">0</p>
+                </div>
+                <select id="signo">
+                    <option value="ingreso">Ingreso</option>
+                    <option value="gasto">Gasto</option>
+                </select>
+                <input type="number" id="agregar">
+            </div>
             <div>
                 <p>
                     <div>Ingresos</div>
@@ -24,30 +30,6 @@
                 </p>
             </div>
             <button id="boton" onclick="actualizarTotal();">Sumar</button>
-            <script>
-                let sumaTotal = 0;
-                let ingresosTotal = 0;
-                let gastosTotal = 0;
-
-                function sumar(var1,var2){
-                    sum = parseInt(var1) + parseInt(var2);
-                    return (sum);
-                }
-                function actualizarTotal(){
-                    var signo = document.getElementById("signo").value;
-                    if (signo == "ingreso"){
-                        var valorAgregar = Math.abs(document.getElementById("agregar").value);
-                        ingresosTotal = sumar(ingresosTotal, valorAgregar);
-                    } else {
-                        var valorAgregar = -Math.abs(document.getElementById("agregar").value);  
-                        gastosTotal = sumar(gastosTotal, valorAgregar);  
-                    }
-                    sumaTotal = sumar(sumaTotal,valorAgregar);
-                    document.getElementById("total").innerText = sumaTotal;
-                    document.getElementById("ingresos").innerText = "+"+ingresosTotal;
-                    document.getElementById("gastos").innerText = gastosTotal;
-                }
-            </script>
         </div>
     </body>
 </html>
